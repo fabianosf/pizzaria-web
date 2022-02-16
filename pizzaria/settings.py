@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'endereco',
     'pedido',
     'produto',
+    'categoria',
 ]
 
 MIDDLEWARE = [
