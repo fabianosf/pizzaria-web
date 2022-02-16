@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'produto',
     'categoria',
     'observacao',
+    'motoboy',
+    'pagamento',
+    'tipo_endereco',
 ]
 
 MIDDLEWARE = [
