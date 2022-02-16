@@ -1,5 +1,5 @@
 from django.db import models
-
+from cliente .models import Cliente
 
 class Endereco(models.Model):
     COMPLEMENTO_CHOICES = (
@@ -11,6 +11,7 @@ class Endereco(models.Model):
     complemento_choices = models.CharField(max_length=1, choices=COMPLEMENTO_CHOICES)    
     cidade = models.CharField(max_length=50, null=False, blank=False)
     bairro = models.CharField(max_length=50, null=False, blank=False)
+    cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
     
     
     def __str__(self):

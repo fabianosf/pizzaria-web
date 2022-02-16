@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'motoboy',
     'pagamento',
     'tipo_endereco',
+    
 ]
 
 MIDDLEWARE = [

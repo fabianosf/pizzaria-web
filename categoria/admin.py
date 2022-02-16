@@ -4,5 +4,5 @@ from .models import Categoria
 
 
 @admin.register(Categoria)
-class ClienteAdmin(admin.ModelAdmin):
-    list_display = ('status',)
+class CategoriaAdmin(admin.ModelAdmin):
+    list_display = ('categoria',)
