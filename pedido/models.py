@@ -1,5 +1,8 @@
 from django.db import models
 from cliente .models import Cliente
+from pedido .models import Pedido
+from observacao .models import Observacao
+
 
 class Pedido(models.Model):
     PEDIDO_CHOICES = (
@@ -13,6 +16,8 @@ class Pedido(models.Model):
     preco_pedido = models.DecimalField(max_digits=5, decimal_places=2)
     status = models.CharField(max_length=1, choices=PEDIDO_CHOICES)
     cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)  
+    pedido = cliente = models.ForeignKey(Pedido, on_delete=models.CASCADE)
+    observacao = models.OneToOneField(Observacao, on_delete=models.CASCADE)
     criado = models.DateTimeField(auto_now_add=True)
     atualizado = models.DateTimeField(auto_now=True)
 
